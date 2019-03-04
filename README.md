@@ -107,12 +107,27 @@ The distributions of the word_Common feature in similar and non-similar question
 ## 3.6 Featurizing text data with tfidf weighted word-vectors/tfidf word-vectors
 
 # 4. Machine Learning Models
-### 4.1 Reading data from file and storing into sql table
-## 4.2 Converting strings to numerics
-## 4.3 Random train test split( 70:30) 
 ## 4.4 Building a random model (Finding worst-case log-loss)
+TD_IDF weighted word2Vec : Log loss on Test Data using Random Model 0.887242646958
+TF-IDF vectors           :Log loss on Test Data using Random Model 0.8844640634051439
 
 ## 4.4 Logistic Regression with hyperparameter tuning
+### TD_IDF weighted word2Vec
+For values of best alpha =  1 The train log loss is: 0.513842874233
+For values of best alpha =  1 The test log loss is: 0.520035530431
+### TF-IDF vectors 
+For values of best alpha =  0.001 The train log loss is: 0.44096373727997223
+For values of best alpha =  0.001 The test log loss is: 0.44145341577157887
 ## 4.5 Linear SVM with hyperparameter tuning 
+### TD_IDF weighted word2Vec
+For values of best alpha =  0.0001 The train log loss is: 0.478054677285
+For values of best alpha =  0.0001 The test log loss is: 0.489669093534
+### TF-IDF vectors
+For values of best alpha =  1e-05 The train log loss is: 0.45425654847111024
+For values of best alpha =  1e-05 The test log loss is: 0.45423679091520236
 ## 4.6 XGBoost 
-
+### TD_IDF weighted word2Vec
+The test log loss is: 0.357054433715
+### TF-IDF vectors
+For values of best alpha =  1e-05 The train log loss is: 0.3670812049007482
+For values of best alpha =  1e-05 The test log loss is: 0.36926796350167773
