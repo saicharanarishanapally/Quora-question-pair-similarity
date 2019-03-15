@@ -97,27 +97,18 @@ The distributions of the word_Common feature in similar and non-similar question
 ##  Featurizing text data with tfidf weighted word-vectors/tfidf word-vectors
 
 #  Machine Learning Models
-## Building a random model (Finding worst-case log-loss)
-TD_IDF weighted word2Vec : Log loss on Test Data using Random Model 0.887242646958
-TF-IDF vectors           :Log loss on Test Data using Random Model 0.8844640634051439
 
-## Logistic Regression with hyperparameter tuning
-### TD_IDF weighted word2Vec
-For values of best alpha =  1 The train log loss is: 0.513842874233
-For values of best alpha =  1 The test log loss is: 0.520035530431
-### TF-IDF vectors 
-For values of best alpha =  0.001 The train log loss is: 0.44096373727997223
-For values of best alpha =  0.001 The test log loss is: 0.44145341577157887
-## Linear SVM with hyperparameter tuning 
-###  weighted word2Vec
-For values of best alpha =  0.0001 The train log loss is: 0.478054677285
-For values of best alpha =  0.0001 The test log loss is: 0.489669093534
-### TF-IDF vectors
-For values of best alpha =  1e-05 The train log loss is: 0.45425654847111024
-For values of best alpha =  1e-05 The test log loss is: 0.45423679091520236
-## XGBoost 
-### TD_IDF weighted word2Vec
-The test log loss is: 0.357054433715
-### TF-IDF vectors
-For values of best alpha =  1e-05 The train log loss is: 0.3670812049007482
-For values of best alpha =  1e-05 The test log loss is: 0.36926796350167773
+
+# Conclusion
+Model               |       Tokenizer          |  Train Log loss     | Test Log loss
+--------------------|--------------------------|---------------------|--------------
+Logistic Regression |        TFIDF             |   0.44              |  0.41        
+Linear SVM          |        TFIDF             |   0.45              |  0.45        
+xgboost             |        TFIDF             |   0.36              |  0.36        
+Logistic Regression |TFIDF  weighted word2Vec  |   0.51              |  0.52        
+Linear SVM          |TFIDF weighted word2Vec   |   0.47              |  0.48        
+xgboost             |TFIDF weighted word2Vec   |   n/a               |  0.35      
+
+
+
+
